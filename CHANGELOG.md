@@ -5,6 +5,8 @@
 * make all LWRP attributes nillable
 * `knife ssh` now has an --exit-on-error option that allows users to
   fail-fast rather than moving on to the next machine.
+* [**Phil Dibowitz**](https://github.com/jaymzh):
+  [Pull 3013](https://github.com/chef/chef/pull/3013) Allow people to pass in `source` to package
 
 ## 12.1.0
 
