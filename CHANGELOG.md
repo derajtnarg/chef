@@ -6,7 +6,9 @@
 * `knife ssh` now has an --exit-on-error option that allows users to
   fail-fast rather than moving on to the next machine.
 * [**Phil Dibowitz**](https://github.com/jaymzh):
-  [Pull 3013](https://github.com/chef/chef/pull/3013) Allow people to pass in `source` to package
+  [Issue 3008](https://github.com/chef/chef/issues/3008) Allow people to pass in `source` to package
+* [Issue 3011](https://github.com/chef/chef/issues/3011) `package` provider base should include 
+  `Chef::Mixin::Command` as there are still providers that use it.
 
 ## 12.1.0
 
