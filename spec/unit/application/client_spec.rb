@@ -293,7 +293,7 @@ describe Chef::Application::Client, "run_application", :unix_only do
     allow(Chef::Client).to receive(:new).and_return(@client)
     allow(@client).to receive(:run) do
       @pipe[1].puts 'started'
-      sleep 1
+      sleep 2
       @pipe[1].puts 'finished'
     end
   end
@@ -321,7 +321,7 @@ describe Chef::Application::Client, "run_application", :unix_only do
         expect(@pipe[0].gets).to eq("started\n")
         Process.kill("TERM", pid)
         Process.wait
-        sleep 1 # Make sure we give the converging child process enough time to finish
+        sleep 3 # Make sure we give the converging child process enough time to finish
         expect(IO.select([@pipe[0]], nil, nil, 0)).not_to be_nil
         expect(@pipe[0].gets).to eq("finished\n")
       end
